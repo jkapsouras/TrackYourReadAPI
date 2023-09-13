@@ -1,10 +1,11 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.7.1
 import PackageDescription
+// change to 5.8
 
 let package = Package(
     name: "trackYourReadAPI",
     platforms: [
-       .macOS(.v13)
+       .macOS(.v12) //change to v13
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
