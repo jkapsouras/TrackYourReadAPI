@@ -17,6 +17,8 @@ public func configure(_ app: Application) async throws {
 	app.migrations.add(Author.AddBio())
 	app.migrations.add(Author.MakeNameUnique())
 	app.migrations.add(Author.Seed())
+	app.migrations.add(Editor.Create())
+	app.migrations.add(Editor.Seed())
 
     // register routes
     try routes(app)
@@ -34,7 +36,8 @@ func configureDatabase(app: Application) {
 	tls.certificateVerification = .none
 	
 	app.databases.use(.mysql(
-		hostname: "localhost",
+		hostname: "127.0.0.1",
+		port: 3306,
 		username: "root",
 		password: "airport",
 		database: "BooksApp",
