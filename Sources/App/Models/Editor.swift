@@ -26,6 +26,8 @@ final class Editor: Model, Content {
 	@Timestamp(key: Create_20230901.updatedAt, on: .update)
 	var updatedAt: Date?
 	
+	@Children(for: \.$editor) var address: [Address]
+	
 	init() { }
 	
 	init(id: UUID? = nil, name: String, imageUrl: String?) {
@@ -45,6 +47,10 @@ extension Editor {
 		static let imageUrl: FieldKey = .imageUrl
 		static let createdAt: FieldKey = .createdAt
 		static let updatedAt: FieldKey = .updatedAt
+	}
+	
+	enum AddEditorId_20230915 {
+		static let editorId: FieldKey = .editorId
 	}
 }
 

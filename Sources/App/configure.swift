@@ -17,9 +17,12 @@ public func configure(_ app: Application) async throws {
 	app.migrations.add(Author.AddBio())
 	app.migrations.add(Author.MakeNameUnique())
 	app.migrations.add(Author.Seed())
+	app.migrations.add(Address.Create())
 	app.migrations.add(Editor.Create())
+	app.migrations.add(Address.AddEditorIdUnique())
 	app.migrations.add(Editor.Seed())
-
+	app.migrations.add(Address.Seed())
+//
     // register routes
     try routes(app)
 }
