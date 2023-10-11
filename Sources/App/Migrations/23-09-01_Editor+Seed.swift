@@ -33,9 +33,9 @@ extension Editor {
 //			}
 			
 			let editor = editors[0]
-			editor.create(on: database)
-				.flatMap { _ in
-					Address(streetName: "Iπποκράτους", streetNumber: "118", city: "Αθήνα", country: "Ελλάδα", postCode: "11472", editorId:  editor.id!).create(on: database)
+			editor.save(on: database)
+				.map { _ in
+					Address(streetName: "Iπποκράτους", streetNumber: "118", city: "Αθήνα", country: "Ελλάδα", postCode: "11472", editorId:  editor.id!).save(on: database)
 				}
 			
 		}

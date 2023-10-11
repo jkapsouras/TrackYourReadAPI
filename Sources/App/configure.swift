@@ -22,6 +22,8 @@ public func configure(_ app: Application) async throws {
 	app.migrations.add(Address.AddEditorIdUnique())
 	app.migrations.add(Editor.Seed())
 	app.migrations.add(Address.Seed())
+	app.logger.logLevel = .debug
+
 //
     // register routes
     try routes(app)
