@@ -14,8 +14,9 @@ extension Address {
 			return try await database
 				.schema(Address.schema)
 			// 2
+//				.field(Address.AddEditorId_20230915.editorId, .uuid, .required)
 				.field(Address.AddEditorId_20230915.editorId, .uuid, .required)
-				.foreignKey(Address.AddEditorId_20230915.editorId, references: Address.schema, .id, onDelete: .cascade, onUpdate: .noAction)
+//				.foreignKey(Address.AddEditorId_20230915.editorId, references: Editor.schema, .id, onDelete: .cascade, onUpdate: .noAction)
 				.unique(on: Address.AddEditorId_20230915.editorId)
 			// 3
 				.update()

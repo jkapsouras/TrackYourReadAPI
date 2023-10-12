@@ -26,7 +26,7 @@ final class Editor: Model, Content {
 	@Timestamp(key: Create_20230901.updatedAt, on: .update)
 	var updatedAt: Date?
 	
-	@Children(for: \.$editor) var address: [Address]
+	@OptionalChild(for: \.$editor) var address: Address?
 	
 	init() { }
 	
