@@ -22,4 +22,11 @@ extension FieldKey {
 	static let city: FieldKey = "city"
 	static let postCode: FieldKey = "post_code"
 	static let editorId: FieldKey = "editor_id"
+	static let title: FieldKey = "title"
+	static let subtitle: FieldKey = "subtitle"
+	static let coverImageUrl: FieldKey = "cover_image_url"
+	static let isbn: FieldKey = "isbn"
+	static let place: FieldKey = "place"
+	static let bookId: FieldKey = "book_id"
+	static let categoryId: FieldKey = "category_id"
 }

@@ -22,6 +22,10 @@ public func configure(_ app: Application) async throws {
 	app.migrations.add(Address.AddEditorIdUnique())
 	app.migrations.add(Editor.Seed())
 	app.migrations.add(Address.Seed())
+	app.migrations.add(Category.Create())
+	app.migrations.add(Category.Seed())
+	app.migrations.add(Book.Create())
+	app.migrations.add(BookCategoryPivot.Create())
 	app.logger.logLevel = .debug
 
 //
